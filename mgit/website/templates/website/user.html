@@ -1,0 +1,88 @@
+{% extends "website/index.html" %}
+{% block content %}
+
+<div class="container"  id='user-mgit' >
+  <div class="jumbotron" style='margin-top:7%; background-color:white' >
+    <form method='get'>
+
+
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text"  class="form-control" disabled  value='{{user.username}}' name="username"  >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Roll Number</label>
+    <div class="col-sm-10">
+      <input type="text"  class="form-control" disabled  value='{{user.mgituser.Roll_number}}' name="username" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword" disabled value='{{user.email}}' name="pass">
+
+    </div>
+  </div>
+</form>
+
+<a href="{% url 'website:logout' %}"><button class="btn btn-outline-success my-2 my-sm-4 " type="submit">logout</button></a>
+<br>
+<small>Your Published Stories can be viewed in Literary Club</small>
+
+  </div>
+
+</div>
+<div class="container" id='user-posts'>
+  <div class="jumbotron" id='posts'>
+      <ol>
+    {% for stud in objects %}
+
+
+
+        <li>
+          <form method="post" action="{% url 'website:publish' pk=stud.id %}">
+                    {% csrf_token %}
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Author</label>
+            <div class="col-sm-10">
+              <input type="text" name = "user" readonly class="form-control" id="staticEmail" value={{user.username}} >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+                <input type="text"  readonly class="form-control" id="staticEmail" name='title' value={{stud.title}}>
+            </div>
+          </div>
+          <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Text</label>
+              <div class="col-sm-10">
+              <textarea name="story" readonly rows="8" cols="80" class='form-control' id='story' >{{stud.story}}</textarea>
+              </div>
+          </div>
+          <div class="form-group row">
+            {% if stud.publish  %}
+            <div class="col-lg-4">
+              <input type="submit" name=""  disabled class='btn btn-dark' value="Published">
+            </div>
+            {% else %}
+              <div class="col-lg-4">
+                <input type="submit" name="" class='btn btn-primary'value="Publish">
+              </div>
+              {% endif %}
+          </div>
+        </form>
+      </li>
+
+    <hr>
+      {% endfor %}
+    </ol>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

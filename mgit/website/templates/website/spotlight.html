@@ -1,0 +1,42 @@
+{% extends "website/index.html" %}
+{% load static %}
+
+{% block content %}
+<div class="text2" >
+  <h3 class='sp-h3'>Spotlight</h3>
+  <h5 class='sp-h5'>Where the Only Limit is Imagination</h5>
+  <img  class='sp-spot'  src="{% static 'img/stage1.png' %}" style="margin-top:0px; width:100%;" >
+</div>
+
+  <div class="sp-proj">
+    <div class="jumbotron jumbotron-fluid sp-headname1">
+        <h2 class='sp-headname' style ="font-family: 'Pacifico', cursive;">Our Projects</h2>
+    </div>
+
+
+
+              <div class="container">
+                <div class="jumbotron" id='sp-jumbotron1'>
+                    <div class="sp-spot1">
+
+                      <img  src="{% static 'img/Untitled-1.png' %}"   >
+                    </div>
+                    <iframe height="600px" width="100%" class='sp-ytb' height='auto' src="https://www.youtube.com/embed/rG31tMhqVls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="sp-img">
+                      <img src="{% static 'img/war2.jpg' %}" alt="">
+                      <img src="{% static 'img/war3.jpg' %}" alt="">
+                      <img src="{% static 'img/war4.jpg' %}" alt="">
+                  </div>
+                </div>
+                <div class="jumbotron" id='sp-jumbotron2'>
+                  <h2>Interrogation</h2>
+                  <img src="{% static 'img/sp-intr.jpg' %}" alt="">
+
+                </div>
+            </div>
+  </div>
+
+
+
+
+{% endblock %}

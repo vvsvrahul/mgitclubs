@@ -1,0 +1,50 @@
+{% extends "website/index.html" %}
+{% block content %}
+  {% if registered %}
+  <div class="container">
+    <div class="jumbotron" id='luhar' style='margin-top:7%;'>
+      <h1 >Thank you for registering</h1>
+
+    </div>
+  </div>
+  {% else %}
+
+  <div class="container" style='margin-top:7%;'>
+    <h1>Sign Up Here!</h1>
+    <div class="jumbotron" id='where'>
+
+
+      <form method='POST' >
+            {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='username'>
+
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail11">Roll Number</label>
+          <input type="number" class="form-control" id="exampleInputEmail11" aria-describedby="emailHelp" name='Roll_number'>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="email" >
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" >
+        </div>
+        <div class="form-group row">
+
+          <div class="g-recaptcha" data-sitekey="6LdW1awZAAAAAGnDjAmM2o-wo2wjvp-sWdi5fc2X"></div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+
+  </div>
+  {% endif %}
+{% endblock %}

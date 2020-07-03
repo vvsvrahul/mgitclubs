@@ -1,0 +1,358 @@
+
+.text{
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+.nav-link{
+  font-size: 2vh;
+}
+#brand{
+  font-size: 2vh;
+}
+.hm-welcome{
+   position: absolute;
+   top: 18%;
+   left: 12%;
+   width: 80%;
+   /* margin-left: 250px; */
+   font-family: 'Piedra', cursive;
+   font-size: 3vw;
+}
+.hm-place{
+  position: absolute;
+  top: 24%;
+  left: 12%;
+  width: 80%;
+  /* margin-left: 250px; */
+  font-size: 2vw;
+}
+.hm-star{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0px;
+}
+.hm-star h2{
+  font-family: 'Shadows Into Light', cursive;
+}
+.hm-so{
+
+text-align:center;
+font-family: 'Special Elite', cursive;
+font-size: 3vh;
+}
+.hm-all{
+  font-family: 'Lobster', cursive;
+text-align: center;
+
+}
+.hm-int{
+  font-family: 'Holtwood One SC', serif;
+  text-align: center;
+}
+.hm-new{
+  position: absolute;
+  text-align: center;
+  right: 40%;
+
+}
+.hm-img1{
+width:100%;
+
+}
+.hm-jmb{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+
+
+}
+.hm-jmb p{
+  font-size: 2vh;
+
+
+}
+
+
+
+
+
+
+
+
+/* Spotlight page css */
+
+
+.text2{
+   position: relative;
+
+width: auto;
+}
+.sp-h5{
+  position: absolute;
+  top: 22%;
+  left: 40%;
+  width: 50%;
+
+  font-size: 2vw;
+  color: white;
+
+}
+.sp-h3{
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  width: 50%;
+
+  font-family: 'Piedra', cursive;
+  font-size: 3vw;
+  color:white;
+}
+.sp-proj h2{
+  text-align: center;
+
+
+}
+.sp-img{
+  display: flex;
+
+  justify-content: space-around;
+
+}
+
+.sp-proj{
+  background-color: #f9c5d1;
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+
+
+}
+#sp-jumbotron1{
+  background-color: #f9c5d1;
+  background-image: linear-gradient(315deg,  #9795ef 0%,#f9c5d1 74%);
+}
+.sp-headname{
+  font-size: 40px;
+  margin:5px;
+
+}
+.sp-headname1{
+  position: sticky;
+  top:60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#sp-jumbotron2{
+  display: flex;
+  flex-direction: column;
+  background-color: #d5adc8;
+background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+
+}
+#sp-jumbotron2 h2{
+  font-family: 'Stylish', sans-serif;
+  font-size: 40px;
+
+}
+#sp-jumbotron2 img{
+  height:520px;
+}
+.sp-spot{
+
+  width:auto;
+
+}
+
+
+/* mgit user html and lliterary club posts from here */
+
+.hello {
+  text-align: center;
+  font-style: normal;
+  font-family: sans-serif;
+  text-decoration-color: #7FDBFF;
+  text-transform: capitalize;
+  margin-top: 0px;
+  padding-top: 0px;
+
+}
+#story{
+  text-align: center;
+  background-color: rgba(6, 84, 113,0.3);
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+  font-size: 20px;
+}
+#what{
+  background-color: rgba(33, 230, 193,0.1);
+}
+#what1{
+  background-color: rgba(33, 230, 193,0.1);
+}
+
+ /* #mav{
+  background-color: #F1A932;
+}
+body{
+  background: linear-gradient(rgba(230, 100, 101,0.5), #fff);
+  background-repeat:no-repeat;
+} */
+#after{
+    background-color: rgba(33, 230, 193,0.1);
+    text-align: center;
+}
+.storyby{
+    text-align:right;
+    marigin-right:10px;
+}
+#newpost{
+    background-color: rgba(33, 230, 193,0.1);
+}
+#welcome{
+    background-color: rgba(33, 230, 193,0.1);
+        text-align: center;
+}
+#posts{
+    background-color: rgba(33, 230, 193,0.1);
+        text-align: center;
+}
+#where{
+    background-color: rgba(33, 230, 193,0.1);
+        text-align: center;
+}
+#when{
+    background-color: rgba(33, 230, 193,0.1);
+        text-align: center;
+}
+#rahul h1{
+    font-family: 'Metal Mania', cursive;
+}
+#luhar{
+  font-family: 'Piedra', cursive;
+}
+
+
+/* LITERARY CLUB */
+
+@media screen and (max-width:1024px) {
+
+
+
+  .sp-spot{
+
+    height:93vh;
+  ;
+        object-fit:  cover;
+
+  }
+
+  .sp-h5{
+    position: absolute;
+    top: 59%;
+
+
+    width: 50%;
+  font-size: 2vh;
+    color: white;
+      text-align: center;
+      transform: translate(-30%,0);
+
+  }
+
+  .sp-h3{
+    position: absolute;
+    top: 53%;
+
+
+    width: 50%;
+
+    font-family: 'Piedra', cursive;
+    font-size: 3vh;
+    color:white;
+    text-align: center;
+    transform: translate(-50%,0);
+}
+
+.sp-img img{
+
+  display: flex;
+
+
+
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+    object-fit: cover;
+}
+
+#sp-jumbotron2 img{
+width: 100%;
+height: auto;
+
+}
+
+.text{
+position: relative;
+width:100%;
+
+    /* for IE 6 */
+}
+
+.hm-welcome{
+   /* margin-left: 250px; */
+   position: absolute;
+   top:19%;
+   left:20%;
+
+   font-family: 'Piedra', cursive;
+   font-size: 3vh;
+
+}
+.hm-place{
+  position: absolute;
+  top:25%;
+  left:20%;
+  /* margin-left: 250px; */
+  font-size: 2vh;
+  self-align:center;
+}
+.hm-img1{
+
+  padding-top: 5vh;
+  height:90vh;
+  object-fit:  cover;
+
+
+
+
+
+}
+.hm-so{
+
+text-align:center;
+font-family: 'Special Elite', cursive;
+font-size: 3vh;
+}
+.hm-star h2{
+  font-size: 3vh;
+}
+.hm-all{
+  font-size: 2vh;
+}
+.hm-int{
+  font-size: 2vh;
+}
+.hm-new{
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+}

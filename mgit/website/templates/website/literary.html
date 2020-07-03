@@ -1,0 +1,82 @@
+{% extends 'website/index.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container-fluid">
+  <div class="jumbotron" id='after' style='margin-top:7%;'>
+    <h1 >Hi</h1>
+
+    <h3>In this people can write their own stories</h3>
+    <h3>We hope you to write some weird stories</h3>
+
+  </div>
+
+</div>
+<div class="container " id='rahul' class='lit-rahul' style='margin-top:7%;' >
+  <form  method="post">
+    {% csrf_token %}
+
+    <a href="{% url 'website:newpost' %}"><button type="button" class='btn btn-primary' style="float:right;" name="button">NEW POST</button></a>
+  </form>
+  <h1>Posts:</h1>
+</div>
+
+{% for item in lists %}
+<div class="container" id='lit-post-ct'>
+  <div class="jumbotron" id="what1">
+    <h1 class='hello' id='luhar' >{{item.title}}</h1>
+    <textarea name="name" readonly rows="8" cols="80" class='form-control ' id='story'>
+
+      {{item.story}}
+
+    </textarea>
+    <div class="storyby">
+        <small >Story by:<p>{{item.author}}</p></small>
+    </div>
+    <div class="container">
+        <p>
+            <a  data-toggle="collapse" href="#hellooooo{{item.id}}" role="button" aria-expanded="false" aria-controls="hellooooo{{item.id}}">
+              Comments
+            </a>
+            </p>
+            <div class="collapse" id="hellooooo{{item.id}}">
+            <div class="card card-body">
+
+              <form  action="{% url 'website:comments' pk=item.id %}" method="post">
+                  {% csrf_token  %}
+                  <p>
+                    <label for="">Comment:</label>
+                    <input class="form-control" type="text" name="comment" value="">
+                    </p>
+                    <input  class='btn btn-primary' id='wow' type="Submit" name="" value="Submit">
+              </form>
+              <hr>
+              <h4>All Comments:</h4>
+              {% for stud in item.comments.all %}
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item ">{{stud.comment}}</li>
+
+              </ul>
+              {% endfor %}
+
+
+            </div>
+            </div>
+
+
+      </div>
+
+
+  </div>
+
+</div>
+{% endfor %}
+{% else %}
+<div class="container">
+  <div class="jumbotron" id='luhar' style='margin-top:7%;'>
+    <h1>You need to Login to See this Page</h1>
+
+  </div>
+
+</div>
+{% endif %}
+{% endblock %}

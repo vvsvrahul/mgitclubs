@@ -1,0 +1,40 @@
+.text{
+   position: absolute;
+   width: 100%; /* for IE 6 */
+}
+h3{
+   position: absolute;
+   top: 15%;
+   left: 10%;
+   width: 100%;
+   /* margin-left: 250px; */
+   font-family: 'Piedra', cursive;
+   font-size: 3vw;
+}
+h5{
+  position: absolute;
+  top: 21%;
+  left: 10%;
+  width: 100%;
+  /* margin-left: 250px; */
+     font-size: 2vw;
+}
+
+
+h3{
+   position: absolute;
+   top: 200px;
+   left: 50;
+   width: 100%;
+   margin-left: 250px;
+   font-family: 'Piedra', cursive;
+   font-size: 50px;
+}
+h5{
+  position: absolute;
+  top: 250px;
+  left: 50;
+  width: 100%;
+  margin-left: 250px;
+     font-size: 35px;
+}
