@@ -18,6 +18,8 @@ urlpatterns = [
         path('literary/newpost/',views.newposter,name='newpost'),
         path('literary/newpost/comment/<int:pk>/',views.comments,name='comments'),
         path('literary/publish/<int:pk>/',views.publish,name='publish'),
+        path('music/',views.comming,name='comming'),
+        path('dance/',views.comming,name='comming1'),
 
 
 

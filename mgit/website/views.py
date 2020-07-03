@@ -30,6 +30,9 @@ def literary(request):
     context = {'lists':objects}
     return render(request,'website/literary.html',context)
 
+def comming(request):
+    return render(request,'website/cmg.html')
+
 
 
 
