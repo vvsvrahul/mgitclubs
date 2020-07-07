@@ -115,12 +115,12 @@ width: auto;
 
 
 }
-.sp-img{
+/* .sp-img{
   display: flex;
-
+    width: auto;
   justify-content: space-around;
 
-}
+} */
 
 .sp-proj{
   background-color: #f9c5d1;
@@ -139,7 +139,7 @@ width: auto;
 }
 .sp-headname1{
   position: sticky;
-  top:60px;
+  top:100px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -149,7 +149,8 @@ width: auto;
   background-color: #d5adc8;
 background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
 
-}
+
+
 #sp-jumbotron2 h2{
   font-family: 'Stylish', sans-serif;
   font-size: 40px;
@@ -163,6 +164,12 @@ background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
   width:auto;
 
 }
+#sp-jumbotron3{
+  display: flex;
+  flex-direction: column;
+
+}
+
 
 
 /* mgit user html and lliterary club posts from here */
@@ -276,9 +283,9 @@ body{
 
 .sp-img img{
 
-  display: flex;
 
 
+  flex-shrink: 1;
 
   flex-wrap: wrap;
 
